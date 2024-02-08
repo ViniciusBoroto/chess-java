@@ -18,7 +18,7 @@ public class Program {
 		while (true) {
 			try {
 				UI.clearScreen();
-				UI.printBoard(chessMatch.getPieces());
+				UI.printMatch(chessMatch);
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
@@ -37,7 +37,7 @@ public class Program {
 				System.out.println("Press enter to continue");
 				sc.nextLine();
 			} catch (InputMismatchException e) {
-				System.out.print(e.getMessage());
+				System.out.println(e.getMessage());
 				System.out.println("Press enter to continue");
 				sc.nextLine();
 			}
